@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Set random referral code in footer
+  const referralCodes = [
+    '1nubdzm4e19021pv',
+    '40204673f3',
+    '9606920d73',
+    '9s4nk9d67z7j786y',
+    'hwx9npnmew47k7d6',
+    'nxaj37gi6b4dw008'
+  ];
+  
+  const randomReferralCode = referralCodes[Math.floor(Math.random() * referralCodes.length)];
+  const referralLink = document.getElementById('windsurf-referral');
+  if (referralLink) {
+    referralLink.href = 'https://windsurf.com/refer?referral_code=' + randomReferralCode;
+  }
+
   const COURSES = [
     ['<a href="https://www.youtube.com/watch?v=zutb5Clb_0Y" target="_blank">HTML</a>','2 – 4 days','None','<span class="badge bg-danger badge-opt">No</span>'],
     ['<a href="https://www.youtube.com/watch?v=-G-zic_LS0A&t=12s" target="_blank">Future FullStack CSS P1</a>','5 – 8 days','None','<span class="badge bg-danger badge-opt">No</span>'],
@@ -26,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // If DataTables loaded, enhance the table
   if (window.DataTable) {
-    new DataTable('#learningTable', {
+    window.learningTable = new DataTable('#learningTable', {
       data: COURSES,
       columns: [
         { title: 'Course', className: 'fw-semibold' },
