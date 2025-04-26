@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://front-end-courses.n8n.community/sitemap.xml

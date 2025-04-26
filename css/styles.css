@@ -1,0 +1,10 @@
+:root {
+  --bs-body-font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+body { background:#f8f9fa; }
+.hero{background:linear-gradient(135deg,#1a73e8,#3dd598);color:#fff;padding:5rem 0 6rem;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;bottom:-120px;right:-120px;width:240px;height:240px;background:rgba(255,255,255,.07);border-radius:50%}
+.datatable-container{margin-top:-4rem;z-index:10;position:relative}
+table.dataTable tbody a{text-decoration:none;color:#0d6efd;font-weight:500}
+table.dataTable tbody a[target="_blank"]:after{content:"\f35d";font-family:"Font Awesome 6 Free", monospace;font-weight:900;margin-left:6px;font-size:.75rem}
+.badge-opt{font-size:.85rem;padding:.35rem .6rem}
